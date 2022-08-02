@@ -34,6 +34,9 @@ public class Controller implements ActionListener, Observer {
                 break;
             case Commands.BTN_OPEN_GRAPHICS:
                 //poner las graficas
+                //prueba 1
+                //prueba 2
+                //prueba 3
                 new ViewGraphics(getListTimeOfLife(),getListTimeOfBlock(),getListTimeReady());
                 break;
             case Commands.BTN_START_SIMULATION:
