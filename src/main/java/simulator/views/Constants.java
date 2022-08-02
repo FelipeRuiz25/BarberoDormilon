@@ -17,9 +17,9 @@ public interface Constants {
     String TITTLE_PANEL_GRAPHIC_TIME_WAITING = " Grafica del tiempo en estado bloqueado ";
     String TEXT_LABEL_TIME_ASSIGN = "Tiempo asignado: ";
     String TEXT_LABEl_CLOCK = "Tiempo simulacion: ";
-    String TEXT_LABEL_QUANTUM = "Quantum";
+    String TEXT_LABEL_CHAIRS_NUMBER = "Numero de Sillas";
 
-    String TEXT_LABEL_MAX_TIME_IO = "Tiempo max Entrada/Salida:";
+    String TEXT_LABEL_MAX_PRIORITY = "Maxima prioridad permitida:";
 
     String TEXT_LABEL_MAX_TIME_PROCESS_LIFE = "Tiempo max vida:";
 

@@ -52,7 +52,7 @@ public class Controller implements ActionListener, Observer {
     }
 
     private void createSimulation() {
-        guiManager.getPanelSimulationInfo().setQuantum(QUANTUM);
+        guiManager.getPanelSimulationInfo().setChairs(QUANTUM);
         guiManager.getPanelProcessExecution().setProgressBarTimeTask(QUANTUM);
         ProcessCreator creator = new ProcessCreator(
                 guiManager.getPanelCreateSimulation().getMaxTimeIOOperation(),
@@ -82,7 +82,6 @@ public class Controller implements ActionListener, Observer {
         }
         if (!simulator.hasCPUAvailable()){
             updateProcessRunningView();
-            guiManager.getPanelProcessBlocked().clear();
         }else {
             guiManager.getPanelProcessExecution().clear();
         }

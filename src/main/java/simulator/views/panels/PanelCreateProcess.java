@@ -10,8 +10,8 @@ public class PanelCreateProcess extends JPanel {
 
     private JLabel labelNameProcess;
     private JLabel textFieldNameProcess;
-    private JLabel labelMaxTimeIO;
-    private JLabel textFieldMaxTimeIO;
+    private JLabel labelMaxPriority;
+    private JLabel textFieldMaxPriority;
 
     private JLabel labelMaxTimeProcessLife;
     private JLabel textFieldMaxTimeProcessLife;
@@ -26,10 +26,10 @@ public class PanelCreateProcess extends JPanel {
     private void init(ActionListener listener) {
         this.labelNameProcess = new JLabel(Constants.TEXT_LABEL_NAME_PROCESS);
         this.textFieldNameProcess = new JLabel("0");
-        this.labelMaxTimeIO = new JLabel(Constants.TEXT_LABEL_MAX_TIME_IO);
+        this.labelMaxPriority = new JLabel(Constants.TEXT_LABEL_MAX_PRIORITY);
         this.labelMaxTimeProcessLife = new JLabel(Constants.TEXT_LABEL_MAX_TIME_PROCESS_LIFE);
         this.labelTimeToNewProcess = new JLabel(Constants.TIME_TO_NEW_PROCESS);
-        this.textFieldMaxTimeIO = new JLabel("0:00");
+        this.textFieldMaxPriority = new JLabel("0");
         this.textFieldMaxTimeProcessLife = new JLabel("0:00");
         this.textFieldTimeToNewProcess = new JLabel("0:00");
         fill();
@@ -46,8 +46,8 @@ public class PanelCreateProcess extends JPanel {
         this.labelMaxTimeProcessLife.setBounds(20, 60, 200, 30);
         this.textFieldMaxTimeProcessLife.setBounds(220, 60, 200, 30);
 
-        this.labelMaxTimeIO.setBounds(20, 80, 200, 30);
-        this.textFieldMaxTimeIO.setBounds(220, 80, 200, 30);
+        this.labelMaxPriority.setBounds(20, 80, 200, 30);
+        this.textFieldMaxPriority.setBounds(220, 80, 200, 30);
 
         add(labelTimeToNewProcess);
         add(textFieldTimeToNewProcess);
@@ -55,8 +55,8 @@ public class PanelCreateProcess extends JPanel {
         add(textFieldNameProcess);
         add(labelMaxTimeProcessLife);
         add(textFieldMaxTimeProcessLife);
-        add(labelMaxTimeIO);
-        add(textFieldMaxTimeIO);
+        add(labelMaxPriority);
+        add(textFieldMaxPriority);
     }
     public void addCount() {
         this.textFieldNameProcess.setText(String.valueOf(Integer.parseInt(this.textFieldNameProcess.getText()) + 1));
@@ -74,8 +74,8 @@ public class PanelCreateProcess extends JPanel {
     public void setNameProcess(String nameProcess){
         textFieldNameProcess.setText(nameProcess);
     }
-    public void setMaxTimeIO(int maxTimeIO){
-        textFieldMaxTimeIO.setText(TimeParser.secondsToString(maxTimeIO));
+    public void setMaxPriority(int maxTimeIO){
+        textFieldMaxPriority.setText(String.valueOf(maxTimeIO));
     }
     public void setMaxTimeProcessLife(int maxTimeProcessLife){
         textFieldMaxTimeProcessLife.setText(TimeParser.secondsToString(maxTimeProcessLife));
@@ -85,7 +85,7 @@ public class PanelCreateProcess extends JPanel {
     }
 
     public void setCreatorInfo(int maxTimeIO ,int maxTimeProcessLife){
-        setMaxTimeIO(maxTimeIO);
+        setMaxPriority(maxTimeIO);
         setMaxTimeProcessLife(maxTimeProcessLife);
     }
 }

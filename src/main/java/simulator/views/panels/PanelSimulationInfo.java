@@ -16,8 +16,8 @@ public class PanelSimulationInfo extends JPanel {
     private JLabel timeAssign;
     private JLabel textTimeAssign;
 
-    private JLabel quantum;
-    private JLabel textQuantum;
+    private JLabel chairs;
+    private JLabel textChairs;
 
     public PanelSimulationInfo(ActionListener listener) {
         this.setBorder(BorderFactory.createTitledBorder(Constants.TITTLE_PANEL_SIMULATION));
@@ -26,8 +26,8 @@ public class PanelSimulationInfo extends JPanel {
         this.textTimeAssign = new JLabel("0:00");
         this.timeClock = new JLabel(Constants.TEXT_LABEl_CLOCK);
         this.textTimeClock = new JLabel("0:00");
-        this.quantum = new JLabel(Constants.TEXT_LABEL_QUANTUM);
-        this.textQuantum = new JLabel("0");
+        this.chairs = new JLabel(Constants.TEXT_LABEL_CHAIRS_NUMBER);
+        this.textChairs = new JLabel("0");
         addToolTips();
         fill();
     }
@@ -46,15 +46,15 @@ public class PanelSimulationInfo extends JPanel {
         this.timeClock.setBounds(20, 50, 150, 30);
         this.textTimeClock.setBounds(150, 50, 100, 30);
 
-        this.quantum.setBounds(20, 80, 150, 30);
-        this.textQuantum.setBounds(150, 80, 100, 30);
+        this.chairs.setBounds(20, 80, 150, 30);
+        this.textChairs.setBounds(150, 80, 100, 30);
         add(btnFinishSimulation);
         add(timeAssign);
         add(textTimeAssign);
         add(timeClock);
         add(textTimeClock);
-        add(quantum);
-        add(textQuantum);
+        add(chairs);
+        add(textChairs);
     }
 
     public void setTimeClock(int time) {
@@ -64,8 +64,8 @@ public class PanelSimulationInfo extends JPanel {
         this.textTimeAssign.setText(TimeParser.secondsToString(time));
     }
 
-    public void setQuantum(int quantum){
-        textQuantum.setText(String.valueOf(quantum));
+    public void setChairs(int chairs){
+        textChairs.setText(String.valueOf(chairs));
     }
 
     public int getTimeRestUCP() {

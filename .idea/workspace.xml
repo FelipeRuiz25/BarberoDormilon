@@ -4,49 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ba1db99-a4c2-45fc-ad44-10ae79963d70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/controllers/Commands.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/controllers/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/models/CPU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/models/Process.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/models/ProcessCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/models/SimulationStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/models/Simulator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/models/exceptions/CPUException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/models/exceptions/ErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/runner/Runner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/GuiManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/ViewGraphics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/components/ModifiedFlowLayout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/components/MyJButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/components/Output.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/front.uml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelCreateProcess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelCreateSimulation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelGraphic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelProcessBlocked.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelProcessExecution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelSimulationInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/RandomNumberGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/TimeParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/observer/Observable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/observer/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/priorityQueue/ListIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/priorityQueue/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/priorityQueue/PriorityQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CPUTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GUITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PriorityQueueTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ProcessCreatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ProcessTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SimulatorTest.java" afterDir="false" />
+    <list default="true" id="1ba1db99-a4c2-45fc-ad44-10ae79963d70" name="Changes" comment="Logica actualizada para el manejo de barbero con cola de prioridad&#10;Falta integrar con la vista y hacer reportes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/controllers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/GuiManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/GuiManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/front.uml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelCreateProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelCreateProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelCreateSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelCreateSimulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelProcessBlocked.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelSimulationInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelSimulationInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,9 +61,16 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SimulatorTest">
+  <component name="RunManager" selected="Application.GUITest">
     <configuration name="CPUTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CPUTest" />
+      <module name="BarberoDormilon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GUITest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUITest" />
       <module name="BarberoDormilon" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -109,10 +83,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProcessCreatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ProcessCreatorTest" />
+    <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="simulator.runner.Runner" />
       <module name="BarberoDormilon" />
-      <method v="2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="simulator.runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="SimulatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SimulatorTest" />
@@ -121,28 +103,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProcessTest.runTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BarberoDormilon" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProcessTest" />
-      <option name="METHOD_NAME" value="runTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.CPUTest" />
+      <item itemvalue="Application.GUITest" />
       <item itemvalue="Application.PriorityQueueTest" />
+      <item itemvalue="Application.Runner" />
       <item itemvalue="Application.SimulatorTest" />
-      <item itemvalue="Application.ProcessCreatorTest" />
-      <item itemvalue="JUnit.ProcessTest.runTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GUITest" />
+        <item itemvalue="Application.Runner" />
         <item itemvalue="Application.SimulatorTest" />
         <item itemvalue="Application.PriorityQueueTest" />
         <item itemvalue="Application.CPUTest" />
-        <item itemvalue="Application.ProcessCreatorTest" />
-        <item itemvalue="JUnit.ProcessTest.runTest" />
       </list>
     </recent_temporary>
   </component>
@@ -154,8 +128,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659449306485</updated>
-      <workItem from="1659449309786" duration="15349000" />
+      <workItem from="1659449309786" duration="19365000" />
     </task>
+    <task id="LOCAL-00001" summary="Logica actualizada para el manejo de barbero con cola de prioridad&#10;Falta integrar con la vista y hacer reportes">
+      <created>1659467007658</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1659467007658</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,5 +153,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Logica actualizada para el manejo de barbero con cola de prioridad&#10;Falta integrar con la vista y hacer reportes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logica actualizada para el manejo de barbero con cola de prioridad&#10;Falta integrar con la vista y hacer reportes" />
   </component>
 </project>

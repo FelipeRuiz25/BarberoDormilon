@@ -7,6 +7,7 @@ import simulator.views.components.MyJButton;
 import simulator.views.panels.*;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -19,10 +20,12 @@ public class GuiManager extends JFrame {
     private PanelProcessExecution panelProcessExecution;
     private PanelCreateSimulation panelCreateSimulation;
 
-    private PanelProcessBlocked panelProcessBlocked;
     private JList<String> readyQueue;
+    private JList<String> ignoredList;
+    private JList<String> attendedList;
     private JLabel labelReadyQueue;
-    private JLabel labelBlockedList;
+    private JLabel labelIgnoredList;
+    private JLabel labelAttendedList;
     private MyJButton btnOpenGraphs;
 
     public GuiManager(ActionListener listener) {
@@ -34,11 +37,13 @@ public class GuiManager extends JFrame {
         this.panelSimulationInfo = new PanelSimulationInfo(listener);
         this.panelCreateProcess = new PanelCreateProcess(listener);
         this.panelProcessExecution = new PanelProcessExecution(listener);
-        this.panelProcessBlocked = new PanelProcessBlocked(listener);
         this.panelCreateSimulation = new PanelCreateSimulation(listener);
         this.readyQueue = new JList<>();
-        this.labelBlockedList = new JLabel("Procesos bloqueados: ");
-        this.labelReadyQueue = new JLabel("Procesos listos: ");
+        this.ignoredList = new JList<>();
+        this.attendedList = new JList<>();
+        this.labelIgnoredList = new JLabel("Procesos Ignorados");
+        this.labelReadyQueue = new JLabel("Procesos En Espera");
+        this.labelAttendedList = new JLabel("Procesos Atendidos");
         this.btnOpenGraphs = new MyJButton(listener, Commands.BTN_OPEN_GRAPHICS, "Abrir Graficas");
         this.init();
     }
@@ -84,32 +89,57 @@ public class GuiManager extends JFrame {
     }
 
     private void fill() {
-        this.panelCreateSimulation.setBounds(30,20, 200,550);
+        this.panelCreateSimulation.setBounds(30,20, 200,580);
 
         this.setLayout(null);
         int move = 220;
         this.panelSimulationInfo.setBounds(30+move, 20, 400, 120);
         this.panelCreateProcess.setBounds(480+move, 20, 300, 120);
-        readyQueue.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0), 1));
-        labelReadyQueue.setBounds(100+move, 150, 230, 20);
+
+        Border listBorder = BorderFactory.createLineBorder(new Color(0, 0, 0), 1);
+        readyQueue.setBorder(listBorder);
+        ignoredList.setBorder(listBorder);
+        attendedList.setBorder(listBorder);
+
         readyQueue.setLayout(new ModifiedFlowLayout());
+        ignoredList.setLayout(new ModifiedFlowLayout());
+        attendedList.setLayout(new ModifiedFlowLayout());
+
         JScrollPane jScrollPaneQueueProcess = new JScrollPane(readyQueue);
         jScrollPaneQueueProcess.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         //ready Queue Bounds
-        jScrollPaneQueueProcess.setBounds(30+move, 170, 230, 400);
-        add(jScrollPaneQueueProcess);
+        labelReadyQueue.setBounds(90+move, 150, 230, 20);
+        jScrollPaneQueueProcess.setBounds(30+move, 170, 230, 430);
+        this.add(jScrollPaneQueueProcess);
 
         this.readyQueue.setFont(Constants.FONT_LIST);
-        this.panelProcessExecution.setBounds(270+move, 160, 250, 200);
-        this.panelProcessBlocked.setBounds(530+move, 160, 250,200);
+        this.ignoredList.setFont(Constants.FONT_LIST);
+        this.attendedList.setFont(Constants.FONT_LIST);
+
+        this.panelProcessExecution.setBounds(270+move, 160, 250, 210);
+
+        JScrollPane jScrollPaneIgnoredList = new JScrollPane(ignoredList);
+        jScrollPaneIgnoredList.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        //ignored List Bounds
+        labelIgnoredList.setBounds(600+move, 150, 230, 20);
+        jScrollPaneIgnoredList.setBounds(530+move, 170, 250,200);
+        this.add(jScrollPaneIgnoredList);
+
+        JScrollPane jScrollPaneAttendedProcess = new JScrollPane(attendedList);
+        jScrollPaneAttendedProcess.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        //attended List Bounds
+        labelAttendedList.setBounds(600+move, 380, 230, 20);
+        jScrollPaneAttendedProcess.setBounds(530+move, 400, 250,200);
+        this.add(jScrollPaneAttendedProcess);
+
         add(panelProcessExecution);
-        this.btnOpenGraphs.setBounds(455+move, 380, 140, 30);
+        this.btnOpenGraphs.setBounds(330+move, 380, 140, 30);
         add(panelSimulationInfo);
         add(panelCreateProcess);
         add(labelReadyQueue);
-        add(labelBlockedList);
+        add(labelIgnoredList);
+        add(labelAttendedList);
         add(panelProcessExecution);
-        add(panelProcessBlocked);
         add(btnOpenGraphs);
         add(panelCreateSimulation);
     }
@@ -155,9 +185,5 @@ public class GuiManager extends JFrame {
 
     public PanelProcessExecution getPanelProcessExecution() {
         return panelProcessExecution;
-    }
-
-    public PanelProcessBlocked getPanelProcessBlocked() {
-        return panelProcessBlocked;
     }
 }
