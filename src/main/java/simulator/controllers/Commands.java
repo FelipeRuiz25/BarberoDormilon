@@ -1,5 +1,8 @@
 package simulator.controllers;
 
+/**
+ * Lista de comandos usados eb los listeners de los botones
+ */
 public interface Commands {
 
     String BTN_FORWARD_SIMULATION = "btnForwardSimulation";

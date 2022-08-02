@@ -11,9 +11,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+/**
+ * Clase controlador encargada de unir la lógica del la simulación con la vista
+ */
 public class Controller implements ActionListener, Observer {
 
+    //Frame Principal
     private GuiManager guiManager;
+    //Clase simulación
     private Simulator simulator;
 
     public Controller() {
@@ -37,18 +42,25 @@ public class Controller implements ActionListener, Observer {
         }
     }
 
+    /**
+     * Limpia la pantalla principal y realiza el proceso de la simulación hasta finalizarla
+     */
     private void finishSimulation() {
         guiManager.resetNameProcess();
         guiManager.resetSpinnerUCP();
         guiManager.resetComponentsPanelCurrentProcess();
         guiManager.clearLists();
-        Process.resetSequential();
         if (simulator != null && simulator.getStatus().isRunning()) {
+            //Si ya hay una simulación y no se ha terminado, ejecuta toda la simulación
             simulator.finishSimulation();
             Output.showInfoMessage("Simulacion finalizada.");
         }
+        Process.resetSequential();
     }
 
+    /**
+     * Crea una simulción a partir de los parametros ingresados en la
+     */
     private void createSimulation() {
         int chairs = guiManager.getPanelCreateSimulation().getChairsNumber();
         guiManager.getPanelSimulationInfo().setChairs(chairs);
