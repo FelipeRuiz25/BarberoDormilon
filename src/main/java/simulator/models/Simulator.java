@@ -81,6 +81,29 @@ public class Simulator extends Observable implements Runnable{
         return stringList;
     }
 
+    public ArrayList<Integer> getProcessesAttendedTimeLife() {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        for (Process process : processesAttended){
+            list.add(process.getTimeLife());
+        }
+        return list;
+    }
+
+    public ArrayList<Integer> getProcessesAttendedPriority() {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        for (Process process : processesAttended){
+            list.add(process.getPriority());
+        }
+        return list;
+    }
+
+    public ArrayList<Integer> getProccesesCountTotal(){
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(processesAttended.size());
+        list.add(processesIgnored.size());
+        list.add(readyQueue.size());
+        return list;
+    }
 
     @Override
     public void run() {

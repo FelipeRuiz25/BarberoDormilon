@@ -25,7 +25,6 @@ public class PanelGraphic extends JPanel{
     private double medium;
     private double end;
 
-    //falta ponerle los datos desde el modelo
     public PanelGraphic(String title, ArrayList<Integer> list){
         this.titleForGraphic = new JLabel(title);
         this.pieChart = ChartFactory.createBarChart(title, Constants.VALUE_X_GRAPHIC, Constants.VALUE_Y_GRAPHIC, createDataset(list), PlotOrientation.VERTICAL, true, true, false);

@@ -12,9 +12,10 @@ public interface Constants {
     String TITTLE_PANEL_SIMULATION = " Simulacion ";
     String TITTLE_PANEL_CREATION_PROCESS = " Creacion de proceso ";
     String TITTLE_FRAME_GRAPHICS = "Graficas de los procesos";
-    String TITTLE_PANEL_GRAPHIC_TIME_LIFE = " Grafica del tiempo de vida total de los procesos ";
-    String TITTLE_PANEL_GRAPHIC_TIME_READY = " Grafica del tiempo en estado listo ";
-    String TITTLE_PANEL_GRAPHIC_TIME_WAITING = " Grafica del tiempo en estado bloqueado ";
+    String TITTLE_PANEL_GRAPHIC_TIME_LIFE = " Grafica del Tiempo de Vida de los Procesos Ejecutados ";
+    String TITTLE_PANEL_GRAPHIC_PRIORITY = " Grafica de prioridad de los Procesos Ejecutados ";
+    String TITTLE_PANEL_GRAPHIC_PROCCES_TOTAL = " Grafica de Totalidad de los Procesos ";
+
     String TEXT_LABEL_TIME_ASSIGN = "Tiempo asignado: ";
     String TEXT_LABEl_CLOCK = "Tiempo simulacion: ";
     String TEXT_LABEL_CHAIRS_NUMBER = "Numero de Sillas";
@@ -29,6 +30,7 @@ public interface Constants {
     String TEXT_BTN_FINISH_SIMULATION = "Finalizar";
     String NO_HAY_MAS_PROCESOS_POR_EJECUTAR = "No hay mas procesos por ejecutar";
     Font FONT_LIST = new Font("Arial", Font.PLAIN, 15);
+    Font FONT_TITLE = new Font("Arial", Font.BOLD, 25);
     String TEXT_BTN_CREATE_PROCESS = "Crear";
     String TEXT_LABEL_NAME_PROCESS = "Nombre proceso:";
     String TEXT_LABEL_TIME_PROCESS = "Tiempo: ";

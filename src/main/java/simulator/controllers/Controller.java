@@ -33,11 +33,8 @@ public class Controller implements ActionListener, Observer {
                 finishSimulation();
                 break;
             case Commands.BTN_OPEN_GRAPHICS:
-                //poner las graficas
-                //prueba 1
-                //prueba 2
-                //prueba 3
-                new ViewGraphics(getListTimeOfLife(),getListTimeOfBlock(),getListTimeReady());
+                //poner graficas
+                new ViewGraphics(simulator.getProcessesAttendedTimeLife(),simulator.getProcessesAttendedPriority(),simulator.getProccesesCountTotal());
                 break;
             case Commands.BTN_START_SIMULATION:
                 if(simulator != null) finishSimulation();
@@ -121,35 +118,6 @@ public class Controller implements ActionListener, Observer {
         int timeNextProcess = simulator.getProcessCreator().getTimeToNewProcess();
         guiManager.getPanelCreateProcess().setTimeToNewProcess(timeNextProcess);
     }
-
-    private ArrayList<Integer> getListTimeOfLife(){
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        for (Process process : simulator.getProcessCreator().getProcesses()){
-            list.add(process.getTimeLife());
-        }
-        return list;
-    }
-
-    private ArrayList<Integer> getListTimeReady(){
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        for (Process process : simulator.getProcessCreator().getProcesses()){
-            list.add(process.getTimeReady());
-        }
-        return list;
-    }
-
-    private ArrayList<Integer> getListTimeOfBlock(){
-        ArrayList<Integer> list = new ArrayList<>();
-        for (Process process : simulator.getProcessCreator().getProcesses()){
-            try {
-                throw new Exception("Lista de procesos bloqueados eliminada");
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-        }
-        return list;
-    }
-
 
     private void updateProcessRunningView() {
         if (!simulator.hasCPUAvailable()) {
