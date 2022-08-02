@@ -95,6 +95,22 @@ public class GuiManager extends JFrame {
         jList.setModel(listModel);
     }
 
+    public void updateIgnoredQueue(ArrayList<String> namesProcess) {
+        DefaultListModel<String> listModel = new DefaultListModel<>();
+        for (String process : namesProcess) {
+            listModel.addElement("Proceso "+process);
+        }
+        ignoredList.setModel(listModel);
+    }
+
+    public void updateAttendedQueue(ArrayList<String> namesProcess) {
+        DefaultListModel<String> listModel = new DefaultListModel<>();
+        for (String process : namesProcess) {
+            listModel.addElement("Proceso "+process);
+        }
+        attendedList.setModel(listModel);
+    }
+
     public void setProcessActual(String nameProcess, int timeAssign, int timeRest) {
         this.panelProcessExecution.setProcessActual(nameProcess, timeAssign, timeRest);
     }

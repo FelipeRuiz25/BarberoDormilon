@@ -30,7 +30,7 @@ public class PanelSimulationInfo extends JPanel {
         this.timeClock = new JLabel(Constants.TEXT_LABEl_CLOCK);
         this.textTimeClock = new JLabel("0:00");
         this.chairs = new JLabel(Constants.TEXT_LABEL_CHAIRS_NUMBER);
-        this.textChairs = new JLabel("0");
+        this.textChairs = new JLabel("numero");
         this.chairsOccupied = new JLabel(Constants.TEXT_LABEL_CHAIRS_OCCUPIED_NUMBER);
         this.textChairsOccupied = new JLabel("0");
         addToolTips();
