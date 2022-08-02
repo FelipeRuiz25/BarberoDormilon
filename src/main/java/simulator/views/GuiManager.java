@@ -53,7 +53,6 @@ public class GuiManager extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         setLocationRelativeTo(null);
-        this.setEnableLists(false);
         this.fill();
         addToolTips();
         setVisible(true);
@@ -77,11 +76,23 @@ public class GuiManager extends JFrame {
     }
 
     public void updateReadyQueue(ArrayList<String> namesProcess) {
+        updateList(namesProcess, readyQueue);
+    }
+
+    public void updateIgnoredList(ArrayList<String> processList) {
+        updateList(processList, ignoredList);
+    }
+
+    public void updateAttendedList(ArrayList<String> processList){
+        updateList(processList, attendedList);
+    }
+
+    private void updateList(ArrayList<String> processList, JList<String> jList){
         DefaultListModel<String> listModel = new DefaultListModel<>();
-        for (String process : namesProcess) {
+        for (String process : processList) {
             listModel.addElement(process);
         }
-        readyQueue.setModel(listModel);
+        jList.setModel(listModel);
     }
 
     public void setProcessActual(String nameProcess, int timeAssign, int timeRest) {
@@ -152,14 +163,11 @@ public class GuiManager extends JFrame {
         this.btnOpenGraphs.setToolTipText(Constants.TOOL_TIP_BTN_OPEN_GRAPHICS);
     }
 
-    public void setEnableLists(boolean status) {
-        this.readyQueue.setEnabled(status);
-    }
-
     public void clearLists() {
         DefaultListModel<String> listModelEmpty = new DefaultListModel<>();
         this.readyQueue.setModel(listModelEmpty);
-        this.setEnableLists(false);
+        this.ignoredList.setModel(listModelEmpty);
+        this.attendedList.setModel(listModelEmpty);
     }
 
     public void resetSpinnerUCP() {

@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ba1db99-a4c2-45fc-ad44-10ae79963d70" name="Changes" comment="Logica actualizada para el manejo de barbero con cola de prioridad&#10;Falta integrar con la vista y hacer reportes">
+    <list default="true" id="1ba1db99-a4c2-45fc-ad44-10ae79963d70" name="Changes" comment="Interfaz gráfica actualizada">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/simulator/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/controllers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/models/CPU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/models/CPU.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/models/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/models/Simulator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/GuiManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/GuiManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/front.uml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelCreateProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelCreateProcess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelCreateSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelCreateSimulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelProcessBlocked.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelSimulationInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelSimulationInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +60,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GUITest">
+  <component name="RunManager" selected="Application.Runner">
     <configuration name="CPUTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CPUTest" />
       <module name="BarberoDormilon" />
@@ -112,8 +111,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GUITest" />
         <item itemvalue="Application.Runner" />
+        <item itemvalue="Application.GUITest" />
         <item itemvalue="Application.SimulatorTest" />
         <item itemvalue="Application.PriorityQueueTest" />
         <item itemvalue="Application.CPUTest" />
@@ -128,7 +127,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659449306485</updated>
-      <workItem from="1659449309786" duration="19365000" />
+      <workItem from="1659449309786" duration="23578000" />
     </task>
     <task id="LOCAL-00001" summary="Logica actualizada para el manejo de barbero con cola de prioridad&#10;Falta integrar con la vista y hacer reportes">
       <created>1659467007658</created>
@@ -137,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659467007658</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Interfaz gráfica actualizada">
+      <created>1659470799583</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1659470799583</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +162,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Logica actualizada para el manejo de barbero con cola de prioridad&#10;Falta integrar con la vista y hacer reportes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Logica actualizada para el manejo de barbero con cola de prioridad&#10;Falta integrar con la vista y hacer reportes" />
+    <MESSAGE value="Interfaz gráfica actualizada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interfaz gráfica actualizada" />
   </component>
 </project>

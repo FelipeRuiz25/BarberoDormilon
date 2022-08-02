@@ -14,10 +14,12 @@ public class PanelCreateSimulation extends JPanel {
     private JLabel labelMaxTimeNextProcess;
     private JLabel labelMaxTimeProcessLife;
     private JLabel labelSimulationTime;
+    private JLabel labelChairsNumber;
     private JSpinner sprMaxProcessTimeLife;
     private JSpinner sprMaxPriority;
     private JSpinner sprMaxTimeNextProcess;
     private JSpinner sprSimulationTime;
+    private JSpinner sprChairsNumber;
 
     public PanelCreateSimulation(ActionListener listener) {
         setBorder(BorderFactory.createTitledBorder("Crear Simulacion"));
@@ -30,6 +32,9 @@ public class PanelCreateSimulation extends JPanel {
         labelSimulationTime = new JLabel("Tiempo de simulacion");
         sprSimulationTime = new JSpinner(new SpinnerNumberModel(1, 1, 999, 1));
         jLabel2 = new JLabel(Constants.TEXT_LABEL_SEG);
+
+        labelChairsNumber = new JLabel("Numero de sillas");
+        sprChairsNumber = new JSpinner(new SpinnerNumberModel(1, 1, 999, 1));
 
         labelMaxTimeProcessLife = new JLabel("Max. Tiempo de Vida Proceso");
         sprMaxProcessTimeLife = new JSpinner(new SpinnerNumberModel(1, 1, 999, 1));
@@ -52,6 +57,11 @@ public class PanelCreateSimulation extends JPanel {
         labelSimulationTime.setBounds(xStart, yStart,240,30);
         sprSimulationTime.setBounds(50,yStart+30,70,30);
         jLabel2.setBounds(130,yStart+30,50,30);
+
+        yStart += 70;
+        labelChairsNumber.setBounds(xStart, yStart,240,30);
+        sprChairsNumber.setBounds(50,yStart+30,70,30);
+
         yStart += 70;
         labelMaxTimeNextProcess.setBounds(xStart, yStart,240,30);
         sprMaxTimeNextProcess.setBounds(50,yStart+30,70,30);
@@ -72,6 +82,9 @@ public class PanelCreateSimulation extends JPanel {
         add(sprSimulationTime);
         add(jLabel2);
 
+        add(labelChairsNumber);
+        add(sprChairsNumber);
+
         add(labelMaxTimeNextProcess);
         add(sprMaxTimeNextProcess);
         add(jLabel6);
@@ -89,7 +102,7 @@ public class PanelCreateSimulation extends JPanel {
     public int getMaxProcessTimeLife(){
         return (int)sprMaxProcessTimeLife.getValue();
     }
-    public int getMaxTimeIOOperation(){
+    public int getMaxPriority(){
         return (int) sprMaxPriority.getValue();
     }
     public int getMaxTimeNextProcess(){
@@ -97,6 +110,10 @@ public class PanelCreateSimulation extends JPanel {
     }
     public int getSimulationTime(){
         return (int)sprSimulationTime.getValue();
+    }
+
+    public int getChairsNumber(){
+        return (int) sprChairsNumber.getValue();
     }
 
     private JLabel jLabel2;

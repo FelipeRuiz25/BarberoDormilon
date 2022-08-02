@@ -19,6 +19,9 @@ public class PanelSimulationInfo extends JPanel {
     private JLabel chairs;
     private JLabel textChairs;
 
+    private JLabel chairsOccupied;
+    private JLabel textChairsOccupied;
+
     public PanelSimulationInfo(ActionListener listener) {
         this.setBorder(BorderFactory.createTitledBorder(Constants.TITTLE_PANEL_SIMULATION));
         this.btnFinishSimulation = new MyJButton(listener, Commands.BTN_FINISH_SIMULATION, Constants.TEXT_BTN_FINISH_SIMULATION);
@@ -28,6 +31,8 @@ public class PanelSimulationInfo extends JPanel {
         this.textTimeClock = new JLabel("0:00");
         this.chairs = new JLabel(Constants.TEXT_LABEL_CHAIRS_NUMBER);
         this.textChairs = new JLabel("0");
+        this.chairsOccupied = new JLabel(Constants.TEXT_LABEL_CHAIRS_OCCUPIED_NUMBER);
+        this.textChairsOccupied = new JLabel("0");
         addToolTips();
         fill();
     }
@@ -48,6 +53,10 @@ public class PanelSimulationInfo extends JPanel {
 
         this.chairs.setBounds(20, 80, 150, 30);
         this.textChairs.setBounds(150, 80, 100, 30);
+
+        this.chairsOccupied.setBounds(210, 80, 150, 30);
+        this.textChairsOccupied.setBounds(340, 80, 100, 30);
+
         add(btnFinishSimulation);
         add(timeAssign);
         add(textTimeAssign);
@@ -55,6 +64,8 @@ public class PanelSimulationInfo extends JPanel {
         add(textTimeClock);
         add(chairs);
         add(textChairs);
+        add(chairsOccupied);
+        add(textChairsOccupied);
     }
 
     public void setTimeClock(int time) {
@@ -68,6 +79,9 @@ public class PanelSimulationInfo extends JPanel {
         textChairs.setText(String.valueOf(chairs));
     }
 
+    public void setChairsOccupied(int chairsOccupied){
+        textChairsOccupied.setText(String.valueOf(chairsOccupied));
+    }
     public int getTimeRestUCP() {
         return Integer.parseInt(this.textTimeClock.getText());
     }

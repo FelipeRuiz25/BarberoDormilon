@@ -18,6 +18,7 @@ public interface Constants {
     String TEXT_LABEL_TIME_ASSIGN = "Tiempo asignado: ";
     String TEXT_LABEl_CLOCK = "Tiempo simulacion: ";
     String TEXT_LABEL_CHAIRS_NUMBER = "Numero de Sillas";
+    String TEXT_LABEL_CHAIRS_OCCUPIED_NUMBER = "Sillas ocupadas: ";
 
     String TEXT_LABEL_MAX_PRIORITY = "Maxima prioridad permitida:";
 

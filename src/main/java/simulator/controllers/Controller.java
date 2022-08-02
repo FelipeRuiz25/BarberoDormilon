@@ -13,8 +13,6 @@ import java.util.ArrayList;
 
 public class Controller implements ActionListener, Observer {
 
-    public static final int QUANTUM = 5;
-
     private GuiManager guiManager;
     private Simulator simulator;
 
@@ -52,21 +50,20 @@ public class Controller implements ActionListener, Observer {
     }
 
     private void createSimulation() {
-        guiManager.getPanelSimulationInfo().setChairs(QUANTUM);
-        guiManager.getPanelProcessExecution().setProgressBarTimeTask(QUANTUM);
+        int chairs = guiManager.getPanelCreateSimulation().getChairsNumber();
+        guiManager.getPanelSimulationInfo().setChairs(chairs);
         ProcessCreator creator = new ProcessCreator(
-                guiManager.getPanelCreateSimulation().getMaxTimeIOOperation(),
+                guiManager.getPanelCreateSimulation().getMaxPriority(),
                 guiManager.getPanelCreateSimulation().getMaxProcessTimeLife(),
                 guiManager.getPanelCreateSimulation().getMaxTimeNextProcess()
         );
-        //todo actualizar para que muestre la priordad máxima en pantalla
         guiManager.getPanelCreateProcess().setCreatorInfo(
                 creator.getMaxPriority(), creator.getMaxTimeProcessLife()
         );
         int simulationTime = guiManager.getPanelCreateSimulation().getSimulationTime();
         guiManager.getPanelSimulationInfo().setSimulationTime(simulationTime);
-        //todo: obtener numero de sillas desde la interfaz
-        simulator = new Simulator(simulationTime,new CPU(), creator, 5);
+
+        simulator = new Simulator(simulationTime,new CPU(), creator, chairs);
         simulator.addObserver(this);
         simulator.startSimulation();
     }
@@ -75,9 +72,15 @@ public class Controller implements ActionListener, Observer {
     public void update(SimulationStatus status) {
         updateTime();
         if (status.processCreated()){
-            processCreated();
+            guiManager.getPanelCreateProcess().addCount();
+            if (status.processIgnored()){
+                guiManager.updateIgnoredList(simulator.getIgnoredList());
+            }else {
+                guiManager.updateReadyQueue(simulator.getReadyQueue());
+                updateOccupiedNumber();
+            }
         }
-        if (status.newProcessRunning() || status.cpuExpirationTime()){
+        if (status.newProcessRunning()){
             guiManager.updateReadyQueue(simulator.getReadyQueue());
         }
         if (!simulator.hasCPUAvailable()){
@@ -85,6 +88,15 @@ public class Controller implements ActionListener, Observer {
         }else {
             guiManager.getPanelProcessExecution().clear();
         }
+        if (status.cpuExpirationTime()){
+            guiManager.updateAttendedList(simulator.getAttendedList());
+            updateOccupiedNumber();
+        }
+    }
+
+    private void updateOccupiedNumber() {
+        guiManager.getPanelSimulationInfo()
+                .setChairsOccupied(simulator.getChairsOccupiedNumber());
     }
 
     private void updateTime() {
@@ -92,11 +104,6 @@ public class Controller implements ActionListener, Observer {
         guiManager.getPanelSimulationInfo().setTimeClock(timeClock);
         int timeNextProcess = simulator.getProcessCreator().getTimeToNewProcess();
         guiManager.getPanelCreateProcess().setTimeToNewProcess(timeNextProcess);
-    }
-
-    private void processCreated() {
-        guiManager.getPanelCreateProcess().addCount();
-        guiManager.updateReadyQueue(simulator.getReadyQueue());
     }
 
     private ArrayList<Integer> getListTimeOfLife(){
@@ -135,8 +142,9 @@ public class Controller implements ActionListener, Observer {
                     process.getProcessName(),
                     process.getTimeLife(),
                     process.getLifeTimeRemaining());
+            guiManager.getPanelProcessExecution().setProgressBarTimeTask(simulator.getCpu().getExecutionTime());
             guiManager.getPanelProcessExecution().setProgressBarValue(
-                    QUANTUM - simulator.getCPUTimeRemaining()
+                    simulator.getCpu().getExecutionTime() - simulator.getCPUTimeRemaining()
             );
         }
     }

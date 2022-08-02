@@ -15,6 +15,7 @@ public class Simulator extends Observable implements Runnable{
     private boolean stopSimulation;
     //Lista de proceso que no pudieron acceder a la barbería
     private ArrayList<Process> processesIgnored;
+    private ArrayList<Process> processesAttended;
     private PriorityQueue<Process> readyQueue;
     private CPU cpu;
     private ProcessCreator creator;
@@ -25,7 +26,7 @@ public class Simulator extends Observable implements Runnable{
             throw new IllegalArgumentException("Alguno de los parametros ingresados es inválido");
         //crea la lista de bloqueados
         processesIgnored = new ArrayList<>();
-
+        processesAttended = new ArrayList<>();
         //Crea una cola con los asientos disponibles
         readyQueue = new PriorityQueue<>(Comparator.comparing(Process::getPriority));
         //Crea la el objeto encargado de manejar el turno de uso de la CPU
@@ -41,26 +42,45 @@ public class Simulator extends Observable implements Runnable{
      * @return lista de nombres de procesos
      */
     public ArrayList<String> getReadyQueue(){
-        ArrayList<String> queue = new ArrayList<>();
-        for (Process p : readyQueue) {
-            queue.add(
-                    p.getProcessName()
-                    +"   T vida: "+p.getTimeLife()
-            );
-        }
-        return queue;
+        return getAsStringList(readyQueue);
     }
 
     /**
      * Obtiene la lista de los nombres de los procesos
-     * que se encuentran en la lista de procesos bloqueados
+     * que se encuentran en la lista de procesos no atendidos
      * @return lista de nombres de procesos
      */
-    public ArrayList<String> getProcessesIgnored(){
-        ArrayList<String> list = new ArrayList<>();
-        processesIgnored.forEach(process -> list.add(process.getProcessName()));
-        return list;
+    public ArrayList<String> getIgnoredList(){
+        return getAsStringList(processesIgnored);
     }
+
+    /**
+     * Obtiene la lista de los nombres de los procesos
+     * que se encuentran en la lista de procesos ya atendidos por el barbero
+     * @return lista de nombres de procesos
+     */
+    public ArrayList<String> getAttendedList(){
+        return getAsStringList(processesAttended);
+    }
+
+    /**
+     * Obtiene una lista de strings con la información de los procesos asociados
+     * a la lista o colección ingresada
+     * @param list colección de procesos
+     * @return lista de strings
+     */
+    private ArrayList<String> getAsStringList(Iterable<Process> list){
+        ArrayList<String> stringList = new ArrayList<>();
+        for (Process p : list) {
+            stringList.add(
+                    p.getProcessName()
+                            +"   T vida: "+p.getTimeLife()
+                            +"   Prioridad: "+p.getPriority()
+            );
+        }
+        return stringList;
+    }
+
 
     @Override
     public void run() {
@@ -92,8 +112,8 @@ public class Simulator extends Observable implements Runnable{
                 status.processIgnored = true;
             }
         }
-        if (lastProcess != null && lastProcess.isAlive()){
-            readyQueue.push(lastProcess);
+        if (lastProcess != null){
+            processesAttended.add(lastProcess);
             status.cpuExpirationTime = true;
         }
         if (cpu.isFree() && hasProcessesReady()){
@@ -138,6 +158,10 @@ public class Simulator extends Observable implements Runnable{
 
     public ProcessCreator getProcessCreator() {
         return creator;
+    }
+
+    public int getChairsOccupiedNumber(){
+        return readyQueue.size();
     }
 
     @Override
