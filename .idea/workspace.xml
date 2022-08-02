@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1ba1db99-a4c2-45fc-ad44-10ae79963d70" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/controllers/Commands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/controllers/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/models/CPU.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/models/Process.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/models/ProcessCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/models/SimulationStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/models/Simulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/models/exceptions/CPUException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/models/exceptions/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/runner/Runner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/GuiManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/ViewGraphics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/components/ModifiedFlowLayout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/components/MyJButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/components/Output.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/front.uml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelCreateProcess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelCreateSimulation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelGraphic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelProcessBlocked.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelProcessExecution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelSimulationInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/RandomNumberGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/TimeParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/observer/Observable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/observer/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/priorityQueue/ListIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/priorityQueue/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/priorityQueue/PriorityQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CPUTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GUITest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PriorityQueueTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ProcessCreatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ProcessTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SimulatorTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2CnrgmXhZnym3IP3hZxQRWD3T2y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/felipe/Desktop/ISC/Sistemas Operativos/BarberoDormilon/src/test/java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.keymap"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java" />
+      <recent name="$PROJECT_DIR$/src/main/java/util/priorityQueue" />
+      <recent name="$PROJECT_DIR$/src/main/java/util" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SimulatorTest">
+    <configuration name="CPUTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CPUTest" />
+      <module name="BarberoDormilon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PriorityQueueTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PriorityQueueTest" />
+      <module name="BarberoDormilon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProcessCreatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProcessCreatorTest" />
+      <module name="BarberoDormilon" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SimulatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SimulatorTest" />
+      <module name="BarberoDormilon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProcessTest.runTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BarberoDormilon" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProcessTest" />
+      <option name="METHOD_NAME" value="runTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.CPUTest" />
+      <item itemvalue="Application.PriorityQueueTest" />
+      <item itemvalue="Application.SimulatorTest" />
+      <item itemvalue="Application.ProcessCreatorTest" />
+      <item itemvalue="JUnit.ProcessTest.runTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SimulatorTest" />
+        <item itemvalue="Application.PriorityQueueTest" />
+        <item itemvalue="Application.CPUTest" />
+        <item itemvalue="Application.ProcessCreatorTest" />
+        <item itemvalue="JUnit.ProcessTest.runTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ba1db99-a4c2-45fc-ad44-10ae79963d70" name="Changes" comment="" />
+      <created>1659449306485</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659449306485</updated>
+      <workItem from="1659449309786" duration="15349000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
