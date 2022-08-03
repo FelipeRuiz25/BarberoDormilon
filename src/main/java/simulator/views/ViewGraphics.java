@@ -20,7 +20,7 @@ public class ViewGraphics extends JFrame {
     private PanelGraphicComparation graphicProcess;
 
 
-    public ViewGraphics(ArrayList<Integer> listTimeLife, ArrayList<Integer> priority, ArrayList<Integer> process){
+    public ViewGraphics(ArrayList<Integer> listTimeLife, ArrayList<Integer> priority, ArrayList<Integer> process,ArrayList<String> names){
         super(Constants.TITTLE);
         //configurar tema de la aplicacion
         FlatCyanLightIJTheme.setup();
@@ -29,10 +29,10 @@ public class ViewGraphics extends JFrame {
         this.setBackground(Color.WHITE);
         this.mainPanel.setBackground(Color.WHITE);
 
-        this.graphicTimeOfLife  = new PanelGraphic(Constants.TITTLE_PANEL_GRAPHIC_TIME_LIFE,listTimeLife);
+        this.graphicTimeOfLife  = new PanelGraphic(Constants.TITTLE_PANEL_GRAPHIC_TIME_LIFE,listTimeLife,names);
         this.graphicTimeOfLife.setBackground(Color.WHITE);
 
-        this.graphicPriority = new PanelGraphic(Constants.TITTLE_PANEL_GRAPHIC_PRIORITY,priority);
+        this.graphicPriority = new PanelGraphic(Constants.TITTLE_PANEL_GRAPHIC_PRIORITY,priority,names);
         this.graphicPriority.setBackground(Color.WHITE);
 
         this.graphicProcess = new PanelGraphicComparation(Constants.TITTLE_PANEL_GRAPHIC_PROCCES_TOTAL,process);

@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ba1db99-a4c2-45fc-ad44-10ae79963d70" name="Changes" comment="prueba 3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelGraphicComparation.java" afterDir="false" />
+    <list default="true" id="1ba1db99-a4c2-45fc-ad44-10ae79963d70" name="Changes" comment="primera version de las graficas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/simulator/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/controllers/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/simulator/models/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/models/Simulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/ViewGraphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/ViewGraphics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelGraphic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelGraphic.java" afterDir="false" />
     </list>
@@ -164,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659479076202</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="primera version de las graficas">
+      <created>1659483783490</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659483783491</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +191,7 @@
     <MESSAGE value="Interfaz gráfica actualizada" />
     <MESSAGE value="simulacion ejecutandose, falta agregar documentacion y crear reportes" />
     <MESSAGE value="prueba 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="prueba 3" />
+    <MESSAGE value="primera version de las graficas" />
+    <option name="LAST_COMMIT_MESSAGE" value="primera version de las graficas" />
   </component>
 </project>
