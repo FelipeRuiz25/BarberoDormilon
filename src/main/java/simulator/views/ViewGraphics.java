@@ -18,9 +18,11 @@ public class ViewGraphics extends JFrame {
     private PanelGraphic graphicPriority;
     //grafica de cantidad de procesos atendidos y no atendidos y los que quedaron en las sillas
     private PanelGraphicComparation graphicProcess;
+    //grafica de tiempo que cada proceso duro en espera
+    private PanelGraphic graphicTimeReady;
 
 
-    public ViewGraphics(ArrayList<Integer> listTimeLife, ArrayList<Integer> priority, ArrayList<Integer> process,ArrayList<String> names){
+    public ViewGraphics(ArrayList<Integer> listTimeLife, ArrayList<Integer> priority, ArrayList<Integer> process,ArrayList<String> names, ArrayList<Integer> timeReady){
         super(Constants.TITTLE);
         //configurar tema de la aplicacion
         FlatCyanLightIJTheme.setup();
@@ -37,6 +39,9 @@ public class ViewGraphics extends JFrame {
 
         this.graphicProcess = new PanelGraphicComparation(Constants.TITTLE_PANEL_GRAPHIC_PROCCES_TOTAL, process);
         this.graphicProcess.setBackground(Color.WHITE);
+
+        this.graphicTimeReady = new PanelGraphic(Constants.TITTLE_PANEL_GRAPHIC_TIME_READY,"Tiempo", timeReady,names);
+        this.graphicTimeReady.setBackground(Color.WHITE);
 
         this.init();
 
@@ -60,6 +65,7 @@ public class ViewGraphics extends JFrame {
         mainPanel.add(graphicTimeOfLife);
         mainPanel.add(graphicPriority);
         mainPanel.add(graphicProcess);
+        mainPanel.add(graphicTimeReady);
 
         this.add(scroll,BorderLayout.CENTER);
 
