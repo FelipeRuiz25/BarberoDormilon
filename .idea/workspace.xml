@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ba1db99-a4c2-45fc-ad44-10ae79963d70" name="Changes" comment="primera version de las graficas">
+    <list default="true" id="1ba1db99-a4c2-45fc-ad44-10ae79963d70" name="Changes" comment="correccion primera version de las graficas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/controllers/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/simulator/models/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/models/Simulator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/ViewGraphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/ViewGraphics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelGraphic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simulator/views/panels/PanelGraphic.java" afterDir="false" />
     </list>
@@ -169,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659483783491</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="correccion primera version de las graficas">
+      <created>1659485138045</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1659485138045</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +197,7 @@
     <MESSAGE value="simulacion ejecutandose, falta agregar documentacion y crear reportes" />
     <MESSAGE value="prueba 3" />
     <MESSAGE value="primera version de las graficas" />
-    <option name="LAST_COMMIT_MESSAGE" value="primera version de las graficas" />
+    <MESSAGE value="correccion primera version de las graficas" />
+    <option name="LAST_COMMIT_MESSAGE" value="correccion primera version de las graficas" />
   </component>
 </project>
