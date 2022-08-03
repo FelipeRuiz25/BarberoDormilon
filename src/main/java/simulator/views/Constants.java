@@ -15,6 +15,7 @@ public interface Constants {
     String TITTLE_PANEL_GRAPHIC_TIME_LIFE = " Grafica del Tiempo de Vida de los Procesos Ejecutados ";
     String TITTLE_PANEL_GRAPHIC_PRIORITY = " Grafica de prioridad de los Procesos Ejecutados ";
     String TITTLE_PANEL_GRAPHIC_PROCCES_TOTAL = " Grafica de Totalidad de los Procesos ";
+    String TITTLE_PANEL_GRAPHIC_TIME_READY = " Grafica de Tiempo que Duraron En la Silla ";
 
     String TEXT_LABEL_TIME_ASSIGN = "Tiempo asignado: ";
     String TEXT_LABEl_CLOCK = "Tiempo simulacion: ";

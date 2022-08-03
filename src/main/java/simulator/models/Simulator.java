@@ -113,6 +113,14 @@ public class Simulator extends Observable implements Runnable{
         return list;
     }
 
+    public ArrayList<Integer> getProcessesAttendedTimeReady() {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        for (Process process : processesAttended){
+            list.add(process.getTimeReady());
+        }
+        return list;
+    }
+
     @Override
     public void run() {
         try {
