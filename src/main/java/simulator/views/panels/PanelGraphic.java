@@ -25,9 +25,9 @@ public class PanelGraphic extends JPanel{
     private double medium;
     private double end;
 
-    public PanelGraphic(String title, ArrayList<Integer> list, ArrayList<String> name){
+    public PanelGraphic(String title, String y, ArrayList<Integer> list, ArrayList<String> name){
         this.titleForGraphic = new JLabel(title);
-        this.pieChart = ChartFactory.createBarChart(title, Constants.VALUE_X_GRAPHIC, Constants.VALUE_Y_GRAPHIC, createDataset(list,name), PlotOrientation.VERTICAL, true, true, false);
+        this.pieChart = ChartFactory.createBarChart(title, Constants.VALUE_X_GRAPHIC, y, createDataset(list,name), PlotOrientation.VERTICAL, true, true, false);
 
         this.chartPanel = new ChartPanel(pieChart);
 
@@ -38,7 +38,7 @@ public class PanelGraphic extends JPanel{
         //valor inicial
         Marker start = new ValueMarker(init);
         start.setPaint(Color.green);
-        start.setLabel( "Tiempo Minimo" );
+        start.setLabel( y+" Minimo" );
         start.setLabelFont(Constants.FONT_LIST);
         start.setLabelAnchor(RectangleAnchor.BOTTOM_RIGHT);
         start.setLabelTextAnchor(TextAnchor.TOP_RIGHT);
@@ -47,7 +47,7 @@ public class PanelGraphic extends JPanel{
         //valor promedio
         Marker average = new ValueMarker(medium);
         average.setPaint(Color.CYAN);
-        average.setLabel( "Tiempo Promedio" );
+        average.setLabel( y+" Promedio" );
         average.setLabelFont(Constants.FONT_LIST);
         average.setLabelAnchor(RectangleAnchor.BOTTOM_RIGHT);
         average.setLabelTextAnchor(TextAnchor.TOP_RIGHT);
@@ -56,7 +56,7 @@ public class PanelGraphic extends JPanel{
         //valor final
         Marker endMarker = new ValueMarker(end);
         endMarker.setPaint(Color.red);
-        endMarker.setLabel( "Tiempo Maximo" );
+        endMarker.setLabel( y+" Maximo" );
         endMarker.setLabelFont(Constants.FONT_LIST);
         endMarker.setLabelAnchor(RectangleAnchor.BOTTOM_RIGHT);
         endMarker.setLabelTextAnchor(TextAnchor.TOP_RIGHT);
