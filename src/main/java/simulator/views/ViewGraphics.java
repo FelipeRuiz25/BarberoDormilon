@@ -29,13 +29,13 @@ public class ViewGraphics extends JFrame {
         this.setBackground(Color.WHITE);
         this.mainPanel.setBackground(Color.WHITE);
 
-        this.graphicTimeOfLife  = new PanelGraphic(Constants.TITTLE_PANEL_GRAPHIC_TIME_LIFE,"Tiempo",listTimeLife,names);
+        this.graphicTimeOfLife  = new PanelGraphic(Constants.TITTLE_PANEL_GRAPHIC_TIME_LIFE,"Tiempo", listTimeLife, names);
         this.graphicTimeOfLife.setBackground(Color.WHITE);
 
-        this.graphicPriority = new PanelGraphic(Constants.TITTLE_PANEL_GRAPHIC_PRIORITY,"Prioridad",priority,names);
+        this.graphicPriority = new PanelGraphic(Constants.TITTLE_PANEL_GRAPHIC_PRIORITY,"Prioridad", priority,names);
         this.graphicPriority.setBackground(Color.WHITE);
 
-        this.graphicProcess = new PanelGraphicComparation(Constants.TITTLE_PANEL_GRAPHIC_PROCCES_TOTAL,process);
+        this.graphicProcess = new PanelGraphicComparation(Constants.TITTLE_PANEL_GRAPHIC_PROCCES_TOTAL, process);
         this.graphicProcess.setBackground(Color.WHITE);
 
         this.init();
