@@ -25,9 +25,9 @@ public class PanelGraphic extends JPanel{
     private double medium;
     private double end;
 
-    public PanelGraphic(String title, ArrayList<Integer> list){
+    public PanelGraphic(String title, ArrayList<Integer> list, ArrayList<String> name){
         this.titleForGraphic = new JLabel(title);
-        this.pieChart = ChartFactory.createBarChart(title, Constants.VALUE_X_GRAPHIC, Constants.VALUE_Y_GRAPHIC, createDataset(list), PlotOrientation.VERTICAL, true, true, false);
+        this.pieChart = ChartFactory.createBarChart(title, Constants.VALUE_X_GRAPHIC, Constants.VALUE_Y_GRAPHIC, createDataset(list,name), PlotOrientation.VERTICAL, true, true, false);
 
         this.chartPanel = new ChartPanel(pieChart);
 
@@ -76,13 +76,13 @@ public class PanelGraphic extends JPanel{
     }
 
     //a este metodo llegan los datos que se van a poner en la grafica estos son solo para visualizar que sirviera bien
-    private CategoryDataset createDataset(ArrayList<Integer> list) {
+    private CategoryDataset createDataset(ArrayList<Integer> list, ArrayList<String> name) {
         init= 1000000000;
         end = 0;
         // create the dataset...
         final DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         for (int i = 0; i < list.size(); i++) {
-            dataset.addValue(list.get(i),i+"",i+"");
+            dataset.addValue(list.get(i),i+"",name.get(i));
             if (list.get(i)>end){
                 end=list.get(i);
             }

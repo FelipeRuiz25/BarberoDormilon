@@ -34,7 +34,7 @@ public class Controller implements ActionListener, Observer {
                 break;
             case Commands.BTN_OPEN_GRAPHICS:
                 //poner graficas
-                new ViewGraphics(simulator.getProcessesAttendedTimeLife(),simulator.getProcessesAttendedPriority(),simulator.getProccesesCountTotal());
+                new ViewGraphics(simulator.getProcessesAttendedTimeLife(),simulator.getProcessesAttendedPriority(),simulator.getProccesesCountTotal(),simulator.getProcessesAttendedName());
                 break;
             case Commands.BTN_START_SIMULATION:
                 if(simulator != null) finishSimulation();
